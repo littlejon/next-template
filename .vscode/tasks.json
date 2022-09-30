@@ -1,0 +1,12 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "spellcheck",
+      "problemMatcher": ["$eslint-stylish"],
+      "label": "npm: spellcheck",
+      "detail": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore --plugin \"@cspell\" --rule \"@cspell/spellchecker: warn\""
+    }
+  ]
+}

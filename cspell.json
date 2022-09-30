@@ -1,0 +1,15 @@
+{
+  "language": "en-GB",
+  "ignorePaths": [
+    ".git/objects",
+    ".vscode-insiders",
+    ".vscode",
+    "node_modules",
+    "package-lock.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "vscode-extension",
+    "yarn.lock"
+  ],
+  "ignoreWords": ["httpbin", "nookies", "reduxjs", "tailwindcss"]
+}

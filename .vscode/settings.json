@@ -1,0 +1,114 @@
+{
+  "eslint.lintTask.enable": true,
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "jest.jestCommandLine": "yarn jest --runInBand",
+  "jest.autoRun": "off",
+  "jest.coverageFormatter": "GutterFormatter",
+  "jest.showCoverageOnLoad": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.format": true
+  },
+  "prettier.enableDebugLogs": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tabSize": 2,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*, next-env.d.ts, declarations.d.ts",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, next.config.js, .eslintrc.json, .prettierignore, .prettierrc, cspell.json, tailwind.config.js, postcss.config.js",
+    "pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml,.packages,.flutter-plugins,.flutter-plugins-dependencies,.metadata",
+    "*.dart": "${capture}.g.dart",
+    "jest.config.js": "setupTests.ts, globalSetup.ts"
+  },
+  "folderTemplates.structures": [
+    {
+      "name": "TS Component",
+      "structure": [
+        {
+          "fileName": "index.ts",
+          "template": "TS Component Index"
+        },
+        {
+          "fileName": "<FTName>.tsx",
+          "template": "TS Component"
+        },
+        {
+          "fileName": "<FTName>.stories.tsx",
+          "template": "TS Component Stories"
+        },
+        {
+          "fileName": "__tests__/<FTName>.test.tsx",
+          "template": "TS Component Tests"
+        }
+      ]
+    },
+    {
+      "name": "TS Component - Simple",
+      "structure": [
+        {
+          "fileName": "index.ts",
+          "template": "TS Component Index"
+        },
+        {
+          "fileName": "<FTName>.tsx",
+          "template": "TS Component"
+        }
+      ]
+    }
+  ],
+  "folderTemplates.fileTemplates": {
+    "TS Component Index": ["export { default } from \"./<FTName>\";", ""],
+    "TS Component": [
+      "import { useId } from \"react\";",
+      "",
+      "import { DefaultProps } from \"store/types\";",
+      "",
+      "export type <FTName>Props = DefaultProps;",
+      "",
+      "export default function <FTName>({ id = useId() }: <FTName>Props) {",
+      "  return <>{id}</>;",
+      "}",
+      ""
+    ],
+    "TS Component Stories": [
+      "import { ComponentMeta, ComponentStory } from \"@storybook/react\";",
+      "",
+      "import <FTName> from \"./<FTName>\";",
+      "",
+      "export default {",
+      "  component: <FTName>,",
+      "} as ComponentMeta<typeof <FTName>>;",
+      "",
+      "const Template: ComponentStory<typeof <FTName>> = (args) => (",
+      "  <<FTName> {...args} />",
+      ");",
+      "",
+      "export const Primary = Template.bind({});",
+      "",
+      "Primary.args = {};",
+      ""
+    ],
+    "TS Component Tests": [
+      "describe(\"<FTName>\", () => {",
+      "  it.todo(\"<FTName> needs tests written\");",
+      "});",
+      "",
+      "export {};",
+      ""
+    ]
+  }
+}
