@@ -1,1 +1,1 @@
-export const API_HOST = "https://httpbin.org/";
+export const API_HOST = "https://httpbin.org";

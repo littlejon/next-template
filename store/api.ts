@@ -1,11 +1,11 @@
 import { createApi } from "@reduxjs/toolkit/dist/query/react";
 import { HYDRATE } from "next-redux-wrapper";
 
-import { axiosBaseQuery } from "lib/httpClient";
+import { baseQueryWithUnAuthHandler } from "lib/httpClient";
 
 export const api = createApi({
   reducerPath: "api",
-  baseQuery: axiosBaseQuery(),
+  baseQuery: baseQueryWithUnAuthHandler,
   tagTypes: [],
   extractRehydrationInfo(action, { reducerPath }) {
     if (action.type === HYDRATE) {

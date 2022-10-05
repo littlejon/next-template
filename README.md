@@ -6,7 +6,6 @@ Containing:
 - Tailwind CSS
 - Typescript
 - Redux Toolkit - Integrated With:
-  - axios
   - RTK Query
   - next-redux-wrapper
 - Jest/Storybook/MSW

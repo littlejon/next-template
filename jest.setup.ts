@@ -1,4 +1,5 @@
 import "@testing-library/jest-dom/extend-expect";
+import "whatwg-fetch";
 import { server } from "store/__mocks__/server";
 
 Element.prototype.scrollTo = jest.fn();
