@@ -29,10 +29,10 @@
     "*.jsx": "${capture}.js",
     "*.tsx": "${capture}.ts",
     "tsconfig.json": "tsconfig.*, next-env.d.ts, declarations.d.ts",
-    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, next.config.js, .eslintrc.json, .prettierignore, .prettierrc, cspell.json, tailwind.config.js, postcss.config.js",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, next.config.js, .eslintrc.json, .prettierignore, .prettierrc, cspell.json, tailwind.config.js, postcss.config.js, .npmrc",
     "pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml,.packages,.flutter-plugins,.flutter-plugins-dependencies,.metadata",
     "*.dart": "${capture}.g.dart",
-    "jest.config.js": "setupTests.ts, globalSetup.ts"
+    "jest.config.js": "jest.global.ts, jest.setup.ts"
   },
   "folderTemplates.structures": [
     {

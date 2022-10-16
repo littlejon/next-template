@@ -17,7 +17,7 @@ export default function Button({
     <button
       id={id}
       data-testid={dataTestId}
-      className="border border-gray-700 px-3 rounded"
+      className="rounded border border-gray-700 px-3"
       onClick={onClick}
     >
       {children}
