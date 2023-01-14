@@ -3,6 +3,7 @@
 Containing:
 
 - Next.js
+  - @next/font
 - Tailwind CSS
 - Typescript
 - Redux Toolkit - Integrated With:
